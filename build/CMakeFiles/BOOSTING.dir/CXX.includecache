@@ -92,47 +92,47 @@ trackerAdaBoostingClassifier.hpp
 common_includes.hpp
 ../include/common_includes.hpp
 
-/home/vortex/BOOSTING/src/feature.cpp
+/home/vortex/BOOSTING_lib/src/feature.cpp
 feature.hpp
-/home/vortex/BOOSTING/src/feature.hpp
+/home/vortex/BOOSTING_lib/src/feature.hpp
 
-/home/vortex/BOOSTING/src/trackerAdaBoosting.cpp
+/home/vortex/BOOSTING_lib/src/trackerAdaBoosting.cpp
 trackerAdaBoosting.hpp
-/home/vortex/BOOSTING/src/trackerAdaBoosting.hpp
+/home/vortex/BOOSTING_lib/src/trackerAdaBoosting.hpp
 
-/home/vortex/BOOSTING/src/trackerAdaBoostingClassifier.cpp
+/home/vortex/BOOSTING_lib/src/trackerAdaBoostingClassifier.cpp
 trackerAdaBoostingClassifier.hpp
-/home/vortex/BOOSTING/src/trackerAdaBoostingClassifier.hpp
+/home/vortex/BOOSTING_lib/src/trackerAdaBoostingClassifier.hpp
 
-/home/vortex/BOOSTING/src/trackerAdaBoostingModel.cpp
+/home/vortex/BOOSTING_lib/src/trackerAdaBoostingModel.cpp
 trackerAdaBoostingModel.hpp
-/home/vortex/BOOSTING/src/trackerAdaBoostingModel.hpp
+/home/vortex/BOOSTING_lib/src/trackerAdaBoostingModel.hpp
 
-/home/vortex/BOOSTING/src/trackerFeature.cpp
+/home/vortex/BOOSTING_lib/src/trackerFeature.cpp
 trackerFeature.hpp
-/home/vortex/BOOSTING/src/trackerFeature.hpp
+/home/vortex/BOOSTING_lib/src/trackerFeature.hpp
 
-/home/vortex/BOOSTING/src/trackerFeatureSet.cpp
+/home/vortex/BOOSTING_lib/src/trackerFeatureSet.cpp
 trackerFeatureSet.hpp
-/home/vortex/BOOSTING/src/trackerFeatureSet.hpp
+/home/vortex/BOOSTING_lib/src/trackerFeatureSet.hpp
 
-/home/vortex/BOOSTING/src/trackerModel.cpp
+/home/vortex/BOOSTING_lib/src/trackerModel.cpp
 trackerModel.hpp
-/home/vortex/BOOSTING/src/trackerModel.hpp
+/home/vortex/BOOSTING_lib/src/trackerModel.hpp
 
-/home/vortex/BOOSTING/src/trackerSampler.cpp
+/home/vortex/BOOSTING_lib/src/trackerSampler.cpp
 trackerSampler.hpp
-/home/vortex/BOOSTING/src/trackerSampler.hpp
+/home/vortex/BOOSTING_lib/src/trackerSampler.hpp
 
-/home/vortex/BOOSTING/src/trackerSamplerAlgorithm.cpp
+/home/vortex/BOOSTING_lib/src/trackerSamplerAlgorithm.cpp
 trackerSamplerAlgorithm.hpp
-/home/vortex/BOOSTING/src/trackerSamplerAlgorithm.hpp
+/home/vortex/BOOSTING_lib/src/trackerSamplerAlgorithm.hpp
 time.h
 -
 
-/home/vortex/BOOSTING/src/trackerStateEstimator.cpp
+/home/vortex/BOOSTING_lib/src/trackerStateEstimator.cpp
 trackerStateEstimator.hpp
-/home/vortex/BOOSTING/src/trackerStateEstimator.hpp
+/home/vortex/BOOSTING_lib/src/trackerStateEstimator.hpp
 
 /opt/ros/kinetic/include/opencv-3.2.0-dev/opencv/cxcore.h
 opencv2/core/core_c.h

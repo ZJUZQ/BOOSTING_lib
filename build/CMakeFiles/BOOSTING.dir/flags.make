@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DBOOSTING_EXPORTS
 
-CXX_INCLUDES = -I/opt/ros/kinetic/include/opencv-3.2.0-dev -I/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv -I/home/vortex/BOOSTING/include 
+CXX_INCLUDES = -I/opt/ros/kinetic/include/opencv-3.2.0-dev -I/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv -I/home/vortex/BOOSTING_lib/include 
 
