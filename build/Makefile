@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vortex/BOOSTING_lib
+CMAKE_SOURCE_DIR = /home/cnn/BOOSTING_lib
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vortex/BOOSTING_lib/build
+CMAKE_BINARY_DIR = /home/cnn/BOOSTING_lib/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -110,6 +99,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,9 +124,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vortex/BOOSTING_lib/build/CMakeFiles /home/vortex/BOOSTING_lib/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cnn/BOOSTING_lib/build/CMakeFiles /home/cnn/BOOSTING_lib/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vortex/BOOSTING_lib/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cnn/BOOSTING_lib/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -447,8 +447,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... BOOSTING"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... edit_cache"
 	@echo "... src/feature.o"
 	@echo "... src/feature.i"

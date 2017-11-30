@@ -1,8 +1,8 @@
-# Install script for directory: /home/vortex/BOOSTING_lib
+# Install script for directory: /home/cnn/BOOSTING_lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "/home/cnn")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,37 +33,21 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vortex/3rdparty/include/BOOSTING/")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/vortex/3rdparty/include/BOOSTING" TYPE DIRECTORY FILES "/home/vortex/BOOSTING_lib/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/3rdparty/include/BOOSTING" TYPE DIRECTORY FILES "/home/cnn/BOOSTING_lib/include/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}/home/vortex/3rdparty/lib/libBOOSTING.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/vortex/3rdparty/lib/libBOOSTING.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/vortex/3rdparty/lib/libBOOSTING.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so"
          RPATH "")
   endif()
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vortex/3rdparty/lib/libBOOSTING.so")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/vortex/3rdparty/lib" TYPE SHARED_LIBRARY FILES "/home/vortex/BOOSTING_lib/build/libBOOSTING.so")
-  if(EXISTS "$ENV{DESTDIR}/home/vortex/3rdparty/lib/libBOOSTING.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/vortex/3rdparty/lib/libBOOSTING.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/3rdparty/lib" TYPE SHARED_LIBRARY FILES "/home/cnn/BOOSTING_lib/build/libBOOSTING.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/vortex/3rdparty/lib/libBOOSTING.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so")
     endif()
   endif()
 endif()
@@ -76,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vortex/BOOSTING_lib/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cnn/BOOSTING_lib/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

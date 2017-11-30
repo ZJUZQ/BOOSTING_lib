@@ -1,7 +1,7 @@
-/home/vortex/BOOSTING_lib/build/CMakeFiles/install.dir
-/home/vortex/BOOSTING_lib/build/CMakeFiles/list_install_components.dir
-/home/vortex/BOOSTING_lib/build/CMakeFiles/rebuild_cache.dir
-/home/vortex/BOOSTING_lib/build/CMakeFiles/BOOSTING.dir
-/home/vortex/BOOSTING_lib/build/CMakeFiles/install/strip.dir
-/home/vortex/BOOSTING_lib/build/CMakeFiles/install/local.dir
-/home/vortex/BOOSTING_lib/build/CMakeFiles/edit_cache.dir
+/home/cnn/BOOSTING_lib/build/CMakeFiles/install.dir
+/home/cnn/BOOSTING_lib/build/CMakeFiles/list_install_components.dir
+/home/cnn/BOOSTING_lib/build/CMakeFiles/rebuild_cache.dir
+/home/cnn/BOOSTING_lib/build/CMakeFiles/BOOSTING.dir
+/home/cnn/BOOSTING_lib/build/CMakeFiles/install/local.dir
+/home/cnn/BOOSTING_lib/build/CMakeFiles/install/strip.dir
+/home/cnn/BOOSTING_lib/build/CMakeFiles/edit_cache.dir

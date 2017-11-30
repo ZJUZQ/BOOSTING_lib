@@ -22,5 +22,5 @@ add_library( BOOSTING SHARED
 
 target_link_libraries( BOOSTING ${THIRD_PARTY_LIBS} )
 
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/ DESTINATION /home/$USER/3rdparty/include/BOOSTING)
-install(TARGETS BOOSTING DESTINATION /home/$USER/3rdparty/lib)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/ DESTINATION 3rdparty/include/BOOSTING)
+install(TARGETS BOOSTING DESTINATION 3rdparty/lib)
