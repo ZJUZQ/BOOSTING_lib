@@ -1,8 +1,8 @@
-# Install script for directory: /home/cnn/BOOSTING_lib
+# Install script for directory: /home/vortex/BOOSTING_lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cnn")
+  set(CMAKE_INSTALL_PREFIX "/home/vortex")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/3rdparty/include/BOOSTING" TYPE DIRECTORY FILES "/home/cnn/BOOSTING_lib/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/3rdparty/include/BOOSTING" TYPE DIRECTORY FILES "/home/vortex/BOOSTING_lib/include/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -43,7 +43,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/3rdparty/lib" TYPE SHARED_LIBRARY FILES "/home/cnn/BOOSTING_lib/build/libBOOSTING.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/3rdparty/lib" TYPE SHARED_LIBRARY FILES "/home/vortex/BOOSTING_lib/build/libBOOSTING.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/3rdparty/lib/libBOOSTING.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cnn/BOOSTING_lib/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/vortex/BOOSTING_lib/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

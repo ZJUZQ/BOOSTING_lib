@@ -1,4 +1,5 @@
 #include "trackerStateEstimator.hpp"
+#include <omp.h>
 
 namespace BOOSTING
 {
@@ -144,6 +145,7 @@ cv::Ptr<TrackerTargetState> TrackerStateEstimatorAdaBoosting::estimateImpl( cons
 	std::vector<cv::Mat> respColSet;
 
 	// typedef std::vector<std::pair<Ptr<TrackerTargetState>, float> > cv::ConfidenceMap
+	#pragma omp parallel for
 	for ( size_t i = 0; i < currentConfidenceMap.size(); i++ ){
 		cv::Ptr<TrackerAdaBoostingTargetState> currentTargetState = currentConfidenceMap.at( i ).first.staticCast<TrackerAdaBoostingTargetState>();
 		respColSet.push_back( currentTargetState->getTargetResponses() );

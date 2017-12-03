@@ -1,4 +1,5 @@
 #include "trackerAdaBoostingClassifier.hpp"
+#include <omp.h>
 
 namespace BOOSTING
 {
@@ -555,15 +556,19 @@ void Detector::classifySmooth( const std::vector<cv::Mat>& samples_, float minMa
 
   	int curPatch = 0;
   	// Eval and filter
+    #pragma omp parallel for
   	for( int row = 0; row < patchGrid.height; row++ ){
     	for ( int col = 0; col < patchGrid.width; col++ ){
-      		m_confidences[curPatch] = m_strongClassifier->eval( samples_[curPatch] );
+      		//m_confidences[curPatch] = m_strongClassifier->eval( samples_[curPatch] );
+            m_confidences[row*patchGrid.width+col] = m_strongClassifier->eval( samples_[row*patchGrid.width+col] );
 
       		// fill matrix
-			m_confMatrix( row, col ) = m_confidences[curPatch];
+			//m_confMatrix( row, col ) = m_confidences[curPatch];
+            m_confMatrix( row, col ) = m_confidences[row*patchGrid.width+col];
 			curPatch++;
     	}
   	}
+
 
 	// Filter
 	//cv::GaussianBlur(m_confMatrix,m_confMatrixSmooth,cv::Size(3,3),0.8);

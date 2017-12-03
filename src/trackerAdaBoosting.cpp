@@ -371,6 +371,7 @@ bool TrackerBoostingImpl::updateImpl( const cv::Mat& image, cv::Rect2d& bounding
 	// get replaced classifier and change the features
 	std::vector<int> replacedClassifier = model->getTrackerStateEstimator().staticCast<TrackerStateEstimatorAdaBoosting>()->computeReplacedClassifier();
 	std::vector<int> swappedClassifier = model->getTrackerStateEstimator().staticCast<TrackerStateEstimatorAdaBoosting>()->computeSwappedClassifier();
+	
 	for( size_t j = 0; j < replacedClassifier.size(); j++ ){
 		if( replacedClassifier[j] != -1 && swappedClassifier[j] != -1 ){
 			featureSet->getTrackerFeature().at( 0 ).second.staticCast<TrackerFeatureHAAR>()->swapFeature( replacedClassifier[j], swappedClassifier[j] );

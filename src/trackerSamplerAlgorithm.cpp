@@ -1,5 +1,6 @@
 #include "trackerSamplerAlgorithm.hpp"
 #include <time.h>
+#include <omp.h>
 
 namespace BOOSTING
 {
@@ -177,7 +178,7 @@ std::vector<cv::Mat> TrackerSamplerCS::patchesRegularScan( const cv::Mat& image,
  	// while mode == MODE_CLASSIFY
 
  	int curPatch = 0;
-
+ 	#pragma omp parallel for
  	for( int curRow = 0; curRow < sampleROI.height - patchSize.height + 1; curRow += stepRow ){
  		for( int curCol = 0; curCol < sampleROI.width - patchSize.width + 1; curCol += stepCol ){
  			samples[curPatch] = image( cv::Rect( sampleROI.x + curCol, sampleROI.y + curRow, patchSize.width, patchSize.height ) );
