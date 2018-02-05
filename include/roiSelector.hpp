@@ -189,7 +189,6 @@ class ROISelector
 };
 
 
-
 Rect selectROI(InputArray img, bool showCrosshair = false, bool fromCenter = false)
 {
     ROISelector selector;
