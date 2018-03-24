@@ -16,6 +16,6 @@ fi
 mkdir build
 cd build
 cmake -D CMAKE_INSTALL_PREFIX=/home/$USER ..
-make -j 6
+make -j6
 make install
 echo "LD_LIBRARY_PATH=/home/$USER/3rdparty/lib:\$LD_LIBRARY_PATH" >> ~/.bashrc

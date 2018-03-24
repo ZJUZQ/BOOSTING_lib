@@ -1,10 +1,7 @@
 #ifndef BOOSTING_FOURCORNERSELECTOR_HPP
 #define BOOSTING_FOURCORNERSELECTOR_HPP
 
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/core/utility.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
-
+#include "common_includes.hpp"
 #include <algorithm>
 #include <vector>
 
